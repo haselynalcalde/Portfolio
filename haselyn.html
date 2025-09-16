@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haselyn Alcalde— Portfolio</title>
+  <style>
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --card: rgba(255,255,255,0.05);
+      --accent1: #06b6d4;
+      --accent2: #7c3aed;
+      --muted: #94a3b8;
+      --radius: 18px;
+      font-family: "Poppins", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: #e2e8f0;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--accent1); text-decoration: none; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(15,23,42,0.7);
+      z-index: 1000;
+    }
+    header h1 { font-size: 26px; }
+    nav { display: flex; gap: 18px; }
+    nav a:hover { color: var(--accent2); }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+    }
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(6,182,212,0.4);
+    }
+    .hero h2 { font-size: 36px; margin-top: 18px; }
+    .hero p { color: var(--muted); margin-top: 10px; }
+
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+    section { margin-bottom: 40px; }
+    h3 { margin-bottom: 18px; }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-4px); }
+
+    .projects-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    }
+    .project h4 { margin-bottom: 8px; }
+
+    .skill-item { margin-bottom: 18px; }
+    .skill-item span { font-size: 14px; display: block; margin-bottom: 6px; }
+    .progress {
+      height: 20px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress div {
+      height: 100%;
+      text-align: right;
+      padding-right: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #0f172a;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      transition: width 1s ease;
+    }
+
+    .contact { text-align: center; }
+    .socials { display: flex; justify-content: center; gap: 12px; margin-top: 10px; }
+    .socials a { background: var(--card); padding: 10px 16px; border-radius: 999px; }
+    .socials a:hover { background: linear-gradient(90deg,var(--accent1),var(--accent2)); color: #0f172a; }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Haselyn Alcalde</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <img src="1234.jpeg" alt="Haselyn Alcalde">
+    <h2>Hi — I'm Jhon Reymark</h2>
+    <p>Student • Web developer • Problem-solver</p>
+  </section>
+
+  <main>
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <div class="card project">
+          <h4>Portfolio Mini-site</h4>
+          <p>A responsive personal portfolio built with HTML & CSS.</p>
+        </div>
+        <div class="card project">
+          <h4>Grade Tracker</h4>
+          <p>Simple web app for tracking student grades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="card">
+        <div class="skill-item">
+          <span>HTML</span>
+          <div class="progress"><div style="width:90%">90%</div></div>
+        </div>
+        <div class="skill-item">
+          <span>CSS</span>
+          <div class="progress"><div style="width:85%">85%</div></div>
+        </div>
+        <div class="skill-item">
+          <span>JavaScript</span>
+          <div class="progress"><div style="width:70%">70%</div></div>
+        </div>
+        <div class="skill-item">
+          <span>PHP</span>
+          <div class="progress"><div style="width:65%">65%</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>Contact</h3>
+      <div class="card">
+        <p>Email: <a href="mailto:haselynalcalde.com">example@example.com</a></p>
+        <p>Location: Bangued, Abra (Philippines)</p>
+        <div class="socials">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Facebook</a>
+        </d
